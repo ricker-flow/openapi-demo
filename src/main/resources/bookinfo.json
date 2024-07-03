@@ -1,0 +1,22 @@
+{
+  "title": "Book Info",
+  "description": "Object containing all the info about a book",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type":"string"
+    },
+    "author": {
+      "type":"string"
+    },
+    "isbn": {
+      "type": "string",
+      "pattern": "[0-9]{13}"
+    },
+    "availability": {
+      "type": "string",
+      "enum": ["available", "checked out", "overdue","reserved"]
+    },
+  "required": ["name", "availability"]
+  }
+}

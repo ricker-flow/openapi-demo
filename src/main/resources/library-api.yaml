@@ -1,0 +1,39 @@
+openapi: 3.0.0
+info:
+  description: This is a library API
+  version: 1.0.0
+  title: Library
+  license:
+    name: Apache-2.0
+    url: "https://www.apache.org/licenses/LICENSE-2.0.html"
+tags:
+  - name: books
+    description: Search for books and add new ones
+paths:
+  /search:
+    get:
+      tags:
+        - books
+      summary: Search for a book
+      operationId: search
+      parameters:
+        - name: book-name
+          in: query
+          schema:
+            type: string
+            minLength: 3
+        - name: author-name
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Success
+          content:
+            "application/json":
+              schema:
+                type: array,
+                items:
+                  $ref: "./bookinfo.json"
+        "400":
+          description: Bad Request
