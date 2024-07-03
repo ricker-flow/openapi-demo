@@ -34,6 +34,6 @@ paths:
               schema:
                 type: array,
                 items:
-                  $ref: "./bookinfo.json"
+                  $ref: "../schema/bookinfo.json"
         "400":
           description: Bad Request

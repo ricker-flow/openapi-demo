@@ -63,7 +63,7 @@ micronaut {
         replaceLogbackXml = true
     }
     openapi {
-        server("bookstore", file("src/main/resources/library-api.yaml")) {
+        server("bookstore", file("src/main/resources/openapi/library-api.yaml")) {
             apiPackageName = "com.example.api"
             modelPackageName = "com.example.model"
             useReactive = false

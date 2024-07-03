@@ -19,3 +19,5 @@ Using a remote reference returns an error `Failed to get the schema name:`
 
 Build this project.
 
+NOTE: The schema folder is a static resource. The relative path should 
+be the same for file and web.
